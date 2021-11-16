@@ -30,6 +30,7 @@ exports.deleteOrganization = functions.https.onRequest(async (req, res) => {
 });
 
 exports.updateOrganization = functions.https.onRequest(async (req, res) => {
+  console.log(req.auth);
   try {
     const data = req.body;
     const organizationID = req.params[0];
